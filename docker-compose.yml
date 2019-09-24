@@ -1,0 +1,30 @@
+version: "3.7"
+services:
+  testEnv:
+    container_name: api
+    image: pricer
+    ports: 
+      - target: 8080
+        published: 8080
+        protocol: tcp
+        mode: host
+    volumes:
+        - type: bind
+          source: ./app
+          target: /go/src/github.com/Billkeenan/testEnv/app
+          volume:
+            nocopy: true
+  web:
+    container_name: web
+    image: web
+    ports: 
+      - target: 8080
+        published: 8081
+        protocol: tcp
+        mode: host
+    volumes:
+        - type: bind
+          source: ./web
+          target: /go/src/github.com/Billkeenan/testEnv/web
+          volume:
+            nocopy: true
