@@ -4,5 +4,4 @@ sets up 2 containers, running a basic go webserver, calling the 'web' will call 
 
 1. git clone git@github.com:BillKeenan/dockerGoLangEnv.git
 2. cd dockerGoLangEnv/
-3. sh build.sh
-4. sh run.sh
+3. sh run.sh
